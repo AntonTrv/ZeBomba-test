@@ -1,0 +1,386 @@
+@import "~normalize.css";
+@font-face {
+  font-family: "notosans";
+  src: url("../fonts/notosans.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-anchor: none;
+  font-family: "asd", sans-serif;
+  background-color: var(--color-white);
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+body {
+  height: 630px;
+  width: 980px;
+  background-color: #222;
+  margin: auto;
+}
+
+main {
+  background-image: url("../img/main-bg.svg");
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main__wrapper {
+  background-image: url("../img/pathway.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-size: 92%;
+  background-position: 78px 17px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.player__icon-wrapper {
+  position: absolute;
+  bottom: 125px;
+  left: 435px;
+  offset-rotate: -10deg;
+}
+
+.active {
+  offset-path: path("M360 478C360 478 345.628 471.754 337.5 466C324.42 456.74 325.276 438.817 309.5 436C281.5 431 255.719 460.688 222 478C201.718 488.414 192.156 498.37 170.5 505.5C142.189 514.821 121.485 514.358 92 510C52.3483 504.139 5.99997 467.5 3.70595 463.5C0.88883 458.588 -0.0801516 453.211 3.70595 449C10 442 44.0541 441.334 44 422.5C43.9694 411.841 31 409.159 31 398.5C31 387.841 38.2491 379.785 44 374.5C81 340.5 155.5 328.5 157 302C158.328 278.538 21 227 41.5 210.5C55.3151 199.381 78 202 81.5 189.5C84.834 177.593 65.4087 168.76 73 159C80 150 93.44 150.464 94.5 151C139 173.5 142 231 199 214C218.638 208.143 219.5 188.5 214 166.5C200.5 140 197.5 141 201.5 133.5C206.676 123.794 236.134 139.182 258.5 128C263.5 125.501 258.884 114.174 263 108C269 99.0006 282.421 102.541 292.5 84.0004C305.09 60.8409 282.01 32.1839 302 15.0003C325.8 -5.45822 343 19.5005 370.5 39.5003C387.555 51.9038 425.5 28.412 425.5 49.5003C425.5 61.0003 401.084 54.7045 396 71.5004C392.261 83.8533 397.956 85.7429 396 98.5004C393.522 114.667 379.974 114.174 379 130.5C377.477 156.028 415 146.624 415 180C415 198 404.511 193.603 397.5 205.5C381 233.5 403.676 243.328 384 268C352.5 307.5 256.5 338.5 262 356.5C267.89 375.776 300.5 390 338.5 403.5C352.604 408.511 350.989 395.734 365 401C435.5 427.5 513.647 505.853 542.5 477C554 465.5 544.5 457 560.5 452C583.743 444.737 589.295 477.346 618 497.5C629.07 505.273 707.5 466.5 777.5 414C854.308 365.318 924.263 357.448 869.5 274C827.5 210 702.5 386.5 649 334.5C636.732 322.577 606.012 298.297 616.5 286.5C698 244.5 771.697 213.756 731.5 168C684.5 114.5 616.5 192.5 563 207C539.688 213.318 549.907 248.971 531 264C503.668 285.726 469.482 290.894 445 266C411.296 231.73 421.562 191.097 454.5 159.5C479.71 135.317 506.5 116.5 550.5 95.5003C566 88.1026 537.81 78.8002 534.5 63.0003C529.709 40.1348 549.764 4.6759 572 1.49995C589.5 -0.999611 616.305 7.86428 620 36.5C624.13 68.5119 560.73 79.4744 581 105C608 139 620.098 58.6744 660.5 58C687.693 57.546 710.5 64 727.5 78.5C739.682 88.8906 720.425 102.257 733.5 111.5C762.5 132 770 47 816.5 89.5C826.438 98.5827 783.492 101.45 785 118.5C785.901 128.691 796.5 135.5 796.5 135.5");
+  animation: move 40s !important;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards !important;
+  offset-rotate: -10deg;
+  top: -13px !important;
+  left: 79px !important;
+  bottom: unset !important;
+}
+
+.player__icon:hover {
+  animation: hovered 2s infinite linear;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes hovered {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+#controls {
+  width: 959px;
+  height: 63px;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  margin-bottom: 18px;
+}
+
+.slider {
+  background: url("../img/slider-bar.png") no-repeat;
+  background-size: cover;
+  width: 555px;
+  height: 63px;
+  margin: 0 3px;
+  display: flex;
+  align-items: center;
+}
+
+.slide-wrapper {
+  width: 514px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+}
+
+.carousel-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.slide {
+  transition: all 1s;
+  z-index: 1;
+  transition: all 300ms;
+  margin: 0 10px;
+}
+
+.slide > div {
+  height: 50px;
+  width: 50px;
+}
+
+.slide img {
+  height: inherit;
+}
+
+.control-prev {
+  background: url("../img/arrow.svg") no-repeat;
+  height: 27px;
+  width: 14px;
+  cursor: pointer;
+}
+
+.control-next {
+  background: url("../img/arrow-nxt.svg") no-repeat;
+  height: 27px;
+  width: 14px;
+  cursor: pointer;
+}
+
+.chat-button {
+  cursor: pointer;
+  background: url("../img/chat.png") no-repeat;
+  height: 63px;
+  width: 65px;
+  margin-right: 8px;
+}
+
+.trigger-btn {
+  cursor: pointer;
+  background: url("../img/trigger-btn.svg") no-repeat;
+  height: 63px;
+  width: 205px;
+  background-size: contain;
+}
+
+.mail-rating-wrapper {
+  display: flex;
+}
+
+.mail-btn {
+  cursor: pointer;
+  background: url("../img/mail.png") no-repeat;
+  height: 62px;
+  width: 67px;
+  margin-right: 6px;
+}
+
+.rating-btn {
+  cursor: pointer;
+  background: url("../img/rating-btn.svg") no-repeat;
+  height: 62px;
+  width: 67px;
+}
+
+.rating-chart {
+  width: 523px;
+  height: 455px;
+  background-color: #b1783b;
+  position: absolute;
+  z-index: 10;
+  border: 6px solid #895d2e;
+  border-radius: 20px;
+  top: -100vh;
+  transition: all 500ms;
+}
+
+.rating-chart__active {
+  top: 71px;
+}
+
+.rating-chart__heading {
+  width: 380px;
+  margin-left: auto;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-chart__heading img:first-child {
+  height: 33px;
+  position: relative;
+  top: -16.5px;
+}
+
+.rating-chart__heading img:nth-child(2) {
+  height: 26px;
+  align-self: flex-end;
+  margin-right: 11px;
+}
+
+.rating-chart__header {
+  background-color: #009fc0;
+  border-top: 2px;
+  border-bottom: 2px;
+  border-left: 4px;
+  border-right: 4px;
+}
+
+.chart-main__wrapper {
+  height: 324px;
+  width: 464px;
+  background-color: #8c5a31;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 54px;
+  overflow-y: scroll;
+}
+
+.chart-main__wrapper::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.chart-table__container table {
+  width: 403px;
+  max-height: 100%;
+  overflow-y: scroll;
+  margin: auto;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+thead {
+  background: url("../img/thead.svg") no-repeat;
+  margin-bottom: 7px;
+}
+
+tr {
+  height: 29px;
+  color: white;
+  vertical-align: center;
+}
+
+tr th:first-child {
+  text-align: center;
+}
+
+tr > *:nth-child(1) {
+  text-align: center;
+}
+
+tr > *:nth-child(2) {
+  width: 30px;
+}
+
+tr > *:nth-child(3) {
+  width: 55%;
+}
+
+.chart-table__container tbody tr {
+  background: #00d1fc;
+  background: linear-gradient(180deg, #00d1fc 0%, #008daa 35%);
+}
+
+.close-cross {
+  cursor: pointer;
+}
+
+tbody tr {
+  line-height: 0.7;
+}
+
+body tr > *:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+body tr > *:nth-child(4) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.chart-table__container table img {
+  height: 30px;
+  width: 30px;
+}
+
+.friend {
+  background: green !important;
+}
+
+/*# sourceMappingURL=main.css.map */
